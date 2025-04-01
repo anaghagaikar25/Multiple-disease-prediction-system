@@ -1,12 +1,63 @@
-# React + Vite
+Multiple Disease Prediction System using Machine Learning
+Overview
+This project is a web-based multiple disease prediction system that utilizes machine learning models to predict the likelihood of various diseases, including diabetes, heart disease, Parkinson’s disease, and breast cancer. The system is built using Django for the backend API, React for the frontend UI, and machine learning models implemented in Python.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tech Stack
+Backend (API): Django, Django REST Framework
 
-Currently, two official plugins are available:
+Frontend (UI): React.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Machine Learning: Scikit-learn, Pandas, NumPy
 
-## Expanding the ESLint configuration
+Development Environment: Anaconda, Spyder IDE
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Database: SQLite / PostgreSQL (mention the one you used)
+
+Features
+✅ Predicts multiple diseases based on patient input
+✅ Uses trained ML models for accurate diagnosis
+✅ REST API built with Django for efficient data handling
+✅ Interactive UI built with React for a seamless user experience
+✅ Secure and scalable architecture for future enhancements
+
+Project Structure
+📂 multiple-disease-prediction  
+ ├── backend/                # Django REST API  
+ │   ├── models/             # ML models  
+ │   ├── serializers/        # Data serialization  
+ │   ├── views.py            # API logic  
+ │   ├── urls.py             # API routing  
+ │   └── settings.py         # Django configuration  
+ │  
+ ├── frontend/               # React.js UI  
+ │   ├── src/components/     # React components  
+ │   ├── src/pages/          # Page layouts  
+ │   ├── src/services/       # API integration  
+ │   ├── App.js              # Main React file  
+ │   └── index.js            # Entry point  
+ │  
+ ├── models/                 # Trained ML models  
+ ├── datasets/               # Processed datasets  
+ ├── requirements.txt        # Python dependencies  
+ ├── README.md               # Project documentation  
+ 
+How to Run the Project
+1. Clone the Repository
+
+git clone https://github.com/anaghagaikar25/Multiple-disease-prediction-system.git  
+cd multiple-disease-prediction
+
+3. Setup Backend (Django API)
+
+cd backend  
+pip install -r requirements.txt  
+python manage.py migrate  
+python manage.py runserver  
+API will run at http://127.0.0.1:8000/
+
+3. Setup Frontend (React UI)
+
+cd frontend  
+npm install  
+npm start  
+UI will be available at http://localhost:3000/
